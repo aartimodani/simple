@@ -11,20 +11,21 @@ block body
     }
 
   .errorDiv
-    if error  
+    if error
       p!= error[0].msg
-  
+
 
   if error
     p.err #{error}
 
   form(method="post")
-    span Email: 
-    input(type="email", name="email", required=true)
+    span Email:
+    input#email(type="email", name="email", required=true)
     br
 
     span Password:
-    input(type="password", name="password", required=true)
+    input#password(type="password", name="password", required=true)
     br
 
     input(type="submit")
+    script(src="/javascript/script.js")
